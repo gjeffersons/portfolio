@@ -2,75 +2,171 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @font-face {
     font-family: 'cocogoose';
-    src: url(cocogoose.ttf);
+    src: url(/Fontes/Cocogoose\ Pro-trial.ttf);
 }
+@font-face {
+    font-family: 'roboto normal';
+    src: url(../Fontes/RobotoCondensed-Light.ttf);
+}
+@font-face {
+    font-family: 'roboto bold';
+    src: url(../Fontes/RobotoCondensed-Regular.ttf);
+}
+
+/*VARIAVES*/
 :root{
     --cor1:#2a213d;
     --cor2:#9871EC;
     --cor3:#682AE9;
     --cor4:#433269;
     --cor5:#5021B5;
+    --cor6:#1F2028;
 
     --fontedestaque1: 'cocogoose',cursive;
-    --fonteprincipal: 'Roboto Condensed', sans-serif;
+    --fonteprincipal: 'roboto normal', sans-serif;
+    --fontedestaque2: 'roboto bold', sans-serif;
 }
+/*GLOBAL CONFIG*/
 *{
-    margin: 0px;
-    
+    margin: 0px;   
 }
 body{
-    background-color: var(--cor1);
+    background-color: var(--cor6);
 }
-nav  {
+strong{
+    color: white;
+}
+
+/*NAV BAR CONFIG*/
+nav{
     color:white;
-    background-color: var(--cor1);
     display: flex;
    align-items: center;
  justify-content: space-between;
  height: 100px;
-  
+ width: 100%;
+ box-shadow: 0px 0px 10px 2px  rgba(0, 0, 0, 0.342);
+ position: fixed;
+ overflow: hidden;
+ background-color: var(--cor6);
 }
 .logo{
-   width: 15%;
+    width: 180px;
+    height: 80px;
+  margin: 4px 0px 0px 50px;
 }
 nav ul {
-    color:white;
     display: flex;
     list-style-type: none;
-    color: white;
     text-decoration: none;
-    margin-right:100px ;
-    font-size: 1.2em;
-    font-family: var(--fonteprincipal);
-    
-  
+    margin-right: 100px; 
 }
+
 nav a{
-    color: white;
+    color: lightgray;
     text-decoration: none;
     margin:10px;
+    border: 2px solid  var(--cor2);
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-family: var(--fontedestaque2);
+    font-size: 1.4em;
     
 }
+
+nav a:hover{
+    border-color: var(--cor5) ;
+    transform: translateY(-10px);
+}
+
+/*HEADER*/
+
 header{
- 
+    font-weight: normal;
     text-align: center;
-    color: #9871EC;
-
+    color: white;
+    padding: 150px 20px 200px 20px;
+    max-width:800px;
+    margin: auto;
+    
+    border-bottom: 3px solid var(--cor1);
 }
-header h1{
-    font-family:var(--fontedestaque1);
-}
- 
 
+header > h1{
+    font-family:var(--fontedestaque1); 
+    text-align: center;  
+}
+
+header p{
+    font-family: var(--fontedestaque2);  
+    font-size: 1.4em;
+    color: lightsteelblue;
+}
+
+header>h1>span{
+    color: var(--cor2);
+}
+
+header img{
+
+   border: 12px groove var(--cor3);
+   border-radius: 100px;
+   margin-bottom: 20px;
+}
+
+header img:hover{
+    border: 12px groove var(--cor2); 
+ }
+
+/* MAIN CONFIG*/
 main{
-   max-width: 800px;
-   background-color:var(--cor2);
+   max-width: 1000px;
    margin: auto;
+   min-width:350px;
 }
+
 main h1{
+ 
     color: var(--cor3);
 }
 
-nav{
+/*ARTICLES CONFIG*/
+article{
+    font-size: 1.3em;
+    padding: 20px;
+}
+/*About me*/
+article.aboutme{
+   text-align: center;
+   justify-content:space-between ;
+}
+h2#tittleabout{
+   padding-top: 260px;
+    color: white;
+    font-family: var(--fonteprincipal);
+    padding-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
     
+    
+}
+
+section.fases{
+
+    margin-bottom: 50px;
+    border:3px solid var(--cor4);
+    border-radius: 40px;
+    font-family: var(--fonteprincipal);
+    color: lightgrey;
+  padding: 20px      
+    
+}
+section.fases>img{
+padding: 20px;
+margin: auto;
+}
+
+/*containers*/
+.aboutme{
+
 }
